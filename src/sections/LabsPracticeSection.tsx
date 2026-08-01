@@ -33,7 +33,7 @@ const LABS: Lab[] = [
 export default function LabsPracticeSection() {
   return (
     <section className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32">
-      <SectionHeading index="03" label="labs & practice" hero className="mb-14 sm:mb-20">
+      <SectionHeading hero className="mb-14 sm:mb-20">
         Labs &amp; Practice
       </SectionHeading>
 

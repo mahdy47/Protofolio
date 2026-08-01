@@ -33,9 +33,7 @@ export default function ContactSection() {
     >
       <div className="flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16">
         <FadeIn delay={0} y={40}>
-          <SectionHeading index="07" label="contact" hero>
-            Contact
-          </SectionHeading>
+          <SectionHeading hero>Contact</SectionHeading>
         </FadeIn>
 
         <FadeIn delay={0.15} y={30}>

@@ -32,7 +32,7 @@ const COURSES: Course[] = [
 export default function CoursesSection() {
   return (
     <section className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32">
-      <SectionHeading index="06" label="training & courses" hero className="mb-14 sm:mb-20">
+      <SectionHeading hero className="mb-14 sm:mb-20">
         Training &amp; Courses
       </SectionHeading>
 

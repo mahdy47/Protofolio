@@ -51,13 +51,6 @@ export default function HeroSection() {
       <div className="flex flex-1 flex-col justify-center gap-12 px-6 py-12 md:px-10 lg:gap-14">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="flex flex-col items-center gap-5 lg:items-start">
-            <FadeIn delay={0.1} y={20}>
-              <span className="inline-flex items-center gap-2 font-mono text-xs text-[#22C55E] sm:text-sm">
-                <span className="h-2 w-2 rounded-full bg-[#22C55E] shadow-[0_0_10px_rgba(34,197,94,0.8)]" />
-                system.ready — role: junior_penetration_tester
-              </span>
-            </FadeIn>
-
             <FadeIn delay={0.2} y={40} className="w-full">
               <h1 className="hero-heading w-full text-center text-[clamp(2.4rem,11vw,140px)] font-black uppercase leading-[0.9] tracking-tight lg:text-left lg:text-[clamp(2rem,6.5vw,112px)]">
                 <span className="block whitespace-nowrap">Abdelrahman</span>

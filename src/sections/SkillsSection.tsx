@@ -63,7 +63,7 @@ export default function SkillsSection() {
       id="skills"
       className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32"
     >
-      <SectionHeading index="04" label="skills" hero className="mb-14 sm:mb-20">
+      <SectionHeading hero className="mb-14 sm:mb-20">
         Skills
       </SectionHeading>
 

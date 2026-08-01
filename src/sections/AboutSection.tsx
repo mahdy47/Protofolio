@@ -14,9 +14,7 @@ export default function AboutSection() {
     >
       <div className="flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16">
         <FadeIn delay={0} y={40}>
-          <SectionHeading index="01" label="about" hero>
-            About Me
-          </SectionHeading>
+          <SectionHeading hero>About Me</SectionHeading>
         </FadeIn>
 
         <AnimatedText
