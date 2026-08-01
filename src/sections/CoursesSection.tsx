@@ -31,8 +31,8 @@ const COURSES: Course[] = [
 
 export default function CoursesSection() {
   return (
-    <section className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0C0C0C] px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:py-32">
-      <SectionHeading hero className="mb-16 sm:mb-20 md:mb-28">
+    <section className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32">
+      <SectionHeading index="06" label="training & courses" hero className="mb-14 sm:mb-20">
         Training &amp; Courses
       </SectionHeading>
 
@@ -41,17 +41,20 @@ export default function CoursesSection() {
           const Icon = course.icon;
           return (
             <FadeIn key={course.title} delay={i * 0.1} className="h-full">
-              <div className="flex h-full flex-col gap-5 rounded-[30px] border border-[#D7E2EA]/20 bg-[#121212] p-6 sm:p-8">
+              <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-[#D7E2EA]/20 bg-[#121212] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/45 hover:shadow-[0_16px_48px_-16px_rgba(0,229,255,0.28)] sm:p-8">
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+
                 <div className="flex items-start justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[rgba(0,229,255,0.1)] text-[#00E5FF]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#00E5FF]/25 bg-[#00E5FF]/10 text-[#00E5FF]">
                     <Icon size={24} strokeWidth={1.75} />
                   </span>
-                  <span className="rounded-full border border-[#00E5FF]/40 px-3 py-1 text-xs font-medium uppercase tracking-widest text-[#00E5FF]">
+                  <span className="rounded-full border border-[#00E5FF]/30 px-3 py-1 font-mono text-xs font-medium uppercase tracking-widest text-[#00E5FF]">
                     {course.year}
                   </span>
                 </div>
+
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-lg font-medium uppercase leading-none text-[#D7E2EA] sm:text-xl">
+                  <h3 className="text-lg font-medium uppercase leading-tight text-[#D7E2EA] sm:text-xl">
                     {course.title}
                   </h3>
                   {course.provider && (
@@ -60,6 +63,7 @@ export default function CoursesSection() {
                     </p>
                   )}
                 </div>
+
                 <p className="text-sm font-light leading-relaxed text-[#D7E2EA]/70">
                   {course.description}
                 </p>

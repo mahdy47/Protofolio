@@ -29,15 +29,17 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="border-t border-[#D7E2EA]/10 bg-[#0C0C0C] px-5 py-20 sm:px-8 sm:py-24 md:px-10 md:py-32"
+      className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32"
     >
       <div className="flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16">
         <FadeIn delay={0} y={40}>
-          <SectionHeading hero>Contact</SectionHeading>
+          <SectionHeading index="07" label="contact" hero>
+            Contact
+          </SectionHeading>
         </FadeIn>
 
         <FadeIn delay={0.15} y={30}>
-          <p className="max-w-[480px] text-center font-light leading-relaxed text-[#D7E2EA] [font-size:clamp(1rem,1.8vw,1.25rem)]">
+          <p className="max-w-[480px] text-center font-light leading-relaxed text-[#D7E2EA]/80 [font-size:clamp(1rem,1.8vw,1.25rem)]">
             Open to Junior Penetration Testing opportunities.
           </p>
         </FadeIn>
@@ -52,7 +54,7 @@ export default function ContactSection() {
                   href={link.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
-                  className="flex items-center gap-2.5 rounded-full border border-[#D7E2EA]/30 px-8 py-3.5 font-medium uppercase tracking-widest text-[#D7E2EA] transition-colors duration-200 hover:border-[#00E5FF] hover:text-[#00E5FF]"
+                  className="flex items-center gap-2.5 rounded-full border border-[#D7E2EA]/20 bg-[#121212] px-8 py-3.5 font-mono text-xs uppercase tracking-widest text-[#D7E2EA] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#00E5FF]/60 hover:text-[#00E5FF]"
                 >
                   <Icon size={18} strokeWidth={2} />
                   {link.label}

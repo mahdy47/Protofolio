@@ -32,8 +32,8 @@ const LABS: Lab[] = [
 
 export default function LabsPracticeSection() {
   return (
-    <section className="rounded-t-[40px] bg-[#FFFFFF] px-5 py-20 text-[#0C0C0C] sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32">
-      <SectionHeading className="mb-16 sm:mb-20 md:mb-28">
+    <section className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32">
+      <SectionHeading index="03" label="labs & practice" hero className="mb-14 sm:mb-20">
         Labs &amp; Practice
       </SectionHeading>
 
@@ -42,14 +42,15 @@ export default function LabsPracticeSection() {
           const Icon = lab.icon;
           return (
             <FadeIn key={lab.title} delay={i * 0.1} className="h-full">
-              <div className="flex h-full flex-col gap-6 rounded-[30px] border border-[rgba(12,12,12,0.15)] p-6 sm:p-8">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(0,229,255,0.12)] text-[#0085A0]">
-                  <Icon size={26} strokeWidth={1.75} />
+              <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-[#D7E2EA]/20 bg-[#121212] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/45 hover:shadow-[0_16px_48px_-16px_rgba(0,229,255,0.28)] sm:p-8">
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#00E5FF]/25 bg-[#00E5FF]/10 text-[#00E5FF]">
+                  <Icon size={24} strokeWidth={1.75} />
                 </span>
-                <h3 className="text-[clamp(1rem,2.2vw,1.35rem)] font-medium uppercase leading-none">
+                <h3 className="text-[clamp(1rem,2.2vw,1.35rem)] font-medium uppercase leading-tight text-[#D7E2EA]">
                   {lab.title}
                 </h3>
-                <p className="font-light leading-relaxed text-[rgba(12,12,12,0.7)] [font-size:clamp(0.9rem,1.4vw,1.05rem)]">
+                <p className="font-light leading-relaxed text-[#D7E2EA]/70 [font-size:clamp(0.9rem,1.4vw,1rem)]">
                   {lab.description}
                 </p>
               </div>

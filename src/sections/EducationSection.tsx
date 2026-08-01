@@ -4,28 +4,29 @@ import SectionHeading from "../components/SectionHeading";
 
 export default function EducationSection() {
   return (
-    <section className="rounded-t-[40px] bg-[#FFFFFF] px-5 py-20 text-[#0C0C0C] sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32">
-      <SectionHeading className="mb-16 sm:mb-20 md:mb-28">Education</SectionHeading>
+    <section className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32">
+      <SectionHeading index="05" label="education" hero className="mb-14 sm:mb-20">
+        Education
+      </SectionHeading>
 
       <div className="mx-auto flex justify-center">
-        <FadeIn delay={0.1} className="w-full max-w-sm">
-          <div className="flex h-full flex-col gap-6 rounded-[30px] border border-[rgba(12,12,12,0.15)] p-8">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(0,229,255,0.12)] text-[#0085A0]">
-              <GraduationCap size={26} strokeWidth={1.75} />
+        <FadeIn delay={0.1} className="w-full max-w-md">
+          <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-[#D7E2EA]/20 bg-[#121212] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/45 hover:shadow-[0_16px_48px_-16px_rgba(0,229,255,0.28)]">
+            <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+            <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#00E5FF]/25 bg-[#00E5FF]/10 text-[#00E5FF]">
+              <GraduationCap size={24} strokeWidth={1.75} />
             </span>
             <div className="flex flex-col gap-1">
-              <h3 className="text-lg font-medium uppercase leading-none sm:text-xl">
+              <h3 className="text-xl font-medium uppercase leading-none text-[#D7E2EA] sm:text-2xl">
                 El Shrouk Academy
               </h3>
-              <p className="text-sm font-light text-[rgba(12,12,12,0.6)]">
-                Cairo, Egypt
-              </p>
+              <p className="text-sm font-light text-[#D7E2EA]/60">Cairo, Egypt</p>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-xs font-medium uppercase tracking-widest text-[#0085A0]">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#00E5FF]">
                 2023 – 2027
               </span>
-              <p className="text-sm font-light text-[rgba(12,12,12,0.6)]">
+              <p className="text-sm font-light text-[#D7E2EA]/60">
                 Expected graduation 2027
               </p>
             </div>

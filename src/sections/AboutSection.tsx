@@ -10,25 +10,25 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 sm:px-8 md:px-10"
+      className="relative flex min-h-screen flex-col items-center justify-center border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32"
     >
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16">
-          <FadeIn delay={0} y={40}>
-            <SectionHeading hero>About Me</SectionHeading>
-          </FadeIn>
+      <div className="flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16">
+        <FadeIn delay={0} y={40}>
+          <SectionHeading index="01" label="about" hero>
+            About Me
+          </SectionHeading>
+        </FadeIn>
 
-          <AnimatedText
-            text={ABOUT_TEXT}
-            className="max-w-[560px] text-center text-[clamp(1rem,2vw,1.35rem)] font-medium leading-relaxed text-[#D7E2EA]"
-          />
-        </div>
+        <AnimatedText
+          text={ABOUT_TEXT}
+          className="max-w-[560px] text-center font-light leading-relaxed text-[#D7E2EA]/85 [font-size:clamp(1rem,2vw,1.3rem)]"
+        />
+      </div>
 
-        <div className="mt-16 flex justify-center sm:mt-20 md:mt-24">
-          <FadeIn delay={0.2} y={20}>
-            <ContactButton href="mailto:abdelrahman.mahmoud0470@gmail.com" />
-          </FadeIn>
-        </div>
+      <div className="mt-16 flex justify-center sm:mt-20 md:mt-24">
+        <FadeIn delay={0.2} y={20}>
+          <ContactButton href="mailto:abdelrahman.mahmoud0470@gmail.com" />
+        </FadeIn>
       </div>
     </section>
   );

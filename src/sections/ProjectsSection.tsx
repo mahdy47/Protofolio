@@ -60,13 +60,15 @@ interface ProjectCardProps {
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <FadeIn delay={index * 0.1} y={30}>
-      <article className="flex flex-col gap-6 rounded-[40px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 pb-6 sm:rounded-[50px] sm:p-6 sm:pb-8 md:rounded-[60px] md:p-8">
+      <article className="relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-[#D7E2EA]/20 bg-[#121212] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/45 hover:shadow-[0_16px_48px_-16px_rgba(0,229,255,0.28)] sm:p-8">
+        <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+
         <div className="flex flex-wrap items-start justify-between gap-4">
-          <span className="text-[clamp(3rem,10vw,120px)] font-black leading-none text-[#D7E2EA]">
+          <span className="text-[clamp(3rem,9vw,88px)] font-black leading-none text-[#D7E2EA]/10">
             {project.id}
           </span>
           <div className="flex flex-col items-start gap-1 md:items-end">
-            <span className="text-xs uppercase tracking-widest text-[#00E5FF] sm:text-sm">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#00E5FF] sm:text-sm">
               {project.category}
             </span>
             <h3 className="text-xl font-medium uppercase leading-none text-[#D7E2EA] sm:text-2xl md:text-3xl">
@@ -75,7 +77,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
 
-        <p className="max-w-2xl text-[clamp(0.9rem,1.5vw,1.2rem)] font-light leading-relaxed text-[#D7E2EA] opacity-70">
+        <p className="max-w-2xl font-light leading-relaxed text-[#D7E2EA]/75 [font-size:clamp(0.9rem,1.5vw,1.15rem)]">
           {project.description}
         </p>
 
@@ -83,7 +85,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           {project.features.map((feature) => (
             <li
               key={feature}
-              className="flex items-center gap-2.5 text-[clamp(0.85rem,1.4vw,1.05rem)] font-light text-[#D7E2EA] opacity-85"
+              className="flex items-center gap-2.5 font-light text-[#D7E2EA]/80 [font-size:clamp(0.85rem,1.4vw,1rem)]"
             >
               <Check
                 size={14}
@@ -99,7 +101,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-[#00E5FF]/40 px-3.5 py-1 text-xs font-light uppercase tracking-wider text-[#00E5FF] sm:text-sm"
+              className="rounded-full border border-[#00E5FF]/25 px-3.5 py-1 font-mono text-xs uppercase tracking-wider text-[#00E5FF]"
             >
               {tech}
             </span>
@@ -130,13 +132,13 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0C0C0C] px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:py-32"
+      className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32"
     >
-      <SectionHeading hero className="mb-16 sm:mb-20 md:mb-28">
+      <SectionHeading index="02" label="projects" hero className="mb-14 sm:mb-20">
         Projects
       </SectionHeading>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 md:gap-12">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:gap-10">
         {PROJECTS.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Kanit", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
     },
   },

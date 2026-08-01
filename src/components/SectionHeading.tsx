@@ -3,26 +3,41 @@ import type { ReactNode } from "react";
 interface SectionHeadingProps {
   children: ReactNode;
   hero?: boolean;
+  index?: string;
+  label?: string;
   className?: string;
 }
 
 export default function SectionHeading({
   children,
   hero = false,
+  index,
+  label,
   className,
 }: SectionHeadingProps) {
-  const classes = [
-    "text-center",
-    "text-[clamp(3rem,12vw,160px)]",
+  const headingClasses = [
+    "text-[clamp(2.5rem,7vw,6.5rem)]",
     "font-black",
     "uppercase",
-    "leading-none",
+    "leading-[0.9]",
     "tracking-tight",
-    hero ? "hero-heading" : "",
+    "text-center",
+    hero ? "hero-heading" : "text-[#D7E2EA]",
     className ?? "",
   ]
     .filter(Boolean)
     .join(" ");
 
-  return <h2 className={classes}>{children}</h2>;
+  return (
+    <div className="flex flex-col items-center gap-5">
+      {label && (
+        <span className="font-mono text-xs uppercase tracking-[0.35em] text-[#00E5FF]/80 sm:text-sm">
+          {index ? `[ ${index} ]` : ""}
+          {index ? " // " : ""}
+          {label}
+        </span>
+      )}
+      <h2 className={headingClasses}>{children}</h2>
+    </div>
+  );
 }

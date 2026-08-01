@@ -9,7 +9,7 @@ import ContactSection from "./sections/ContactSection";
 
 export default function App() {
   return (
-    <main className="overflow-x-clip bg-[#0C0C0C]">
+    <main className="bg-cyber relative min-h-screen overflow-x-clip">
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

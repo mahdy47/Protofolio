@@ -20,7 +20,7 @@ export default function LiveProjectButton({
   onClick,
   ...rest
 }: LiveProjectButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full border-2 border-[#D7E2EA] px-8 py-3 text-sm font-medium uppercase tracking-widest text-[#D7E2EA] transition-colors duration-200 hover:bg-[#D7E2EA]/10 sm:px-10 sm:py-3.5 sm:text-base ${
+  const classes = `inline-flex items-center justify-center whitespace-nowrap rounded-full border border-[#00E5FF]/40 bg-[#0C0C0C]/40 px-7 py-3 font-mono text-xs uppercase tracking-widest text-[#D7E2EA] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#00E5FF] hover:bg-[#00E5FF]/10 hover:text-[#00E5FF] sm:px-9 sm:py-3.5 sm:text-sm ${
     className ?? ""
   }`;
 

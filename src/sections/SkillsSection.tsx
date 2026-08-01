@@ -61,26 +61,30 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="rounded-t-[40px] bg-[#FFFFFF] px-5 py-20 text-[#0C0C0C] sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32"
+      className="relative border-t border-[#D7E2EA]/10 px-6 py-24 sm:px-8 md:py-32"
     >
-      <SectionHeading className="mb-16 sm:mb-20 md:mb-28">Skills</SectionHeading>
+      <SectionHeading index="04" label="skills" hero className="mb-14 sm:mb-20">
+        Skills
+      </SectionHeading>
 
       <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SKILL_CATEGORIES.map((category, i) => {
           const Icon = category.icon;
           return (
             <FadeIn key={category.id} delay={i * 0.1} className="h-full">
-              <div className="flex h-full flex-col gap-6 rounded-[30px] border border-[rgba(12,12,12,0.15)] p-6 sm:p-7">
+              <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-[#D7E2EA]/20 bg-[#121212] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#00E5FF]/45 hover:shadow-[0_16px_48px_-16px_rgba(0,229,255,0.28)] sm:p-7">
+                <span className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/50 to-transparent" />
+
                 <div className="flex items-center justify-between">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(0,229,255,0.12)] text-[#0085A0]">
-                    <Icon size={26} strokeWidth={1.75} />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#00E5FF]/25 bg-[#00E5FF]/10 text-[#00E5FF]">
+                    <Icon size={24} strokeWidth={1.75} />
                   </span>
-                  <span className="text-[clamp(1.6rem,3vw,2.5rem)] font-black leading-none text-[rgba(12,12,12,0.15)]">
+                  <span className="font-mono text-lg font-medium text-[#00E5FF]/60">
                     {category.id}
                   </span>
                 </div>
 
-                <h3 className="text-[clamp(1rem,2.2vw,1.6rem)] font-medium uppercase leading-none">
+                <h3 className="text-[clamp(1rem,2.2vw,1.5rem)] font-medium uppercase leading-tight text-[#D7E2EA]">
                   {category.title}
                 </h3>
 
@@ -88,7 +92,7 @@ export default function SkillsSection() {
                   {category.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2.5 font-light text-[rgba(12,12,12,0.7)] [font-size:clamp(0.85rem,1.4vw,1.05rem)]"
+                      className="flex items-center gap-2.5 font-light text-[#D7E2EA]/75 [font-size:clamp(0.85rem,1.4vw,1rem)]"
                     >
                       <Check
                         size={14}

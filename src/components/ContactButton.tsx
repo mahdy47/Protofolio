@@ -18,15 +18,10 @@ export default function ContactButton({
   onClick,
   ...rest
 }: ContactButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full bg-[linear-gradient(123deg,#00161F_0%,#007A96_38%,#00B8D9_72%,#00E5FF_100%)] px-8 py-3 text-xs font-medium uppercase tracking-widest text-white transition-transform duration-200 hover:scale-105 sm:px-10 sm:py-3.5 sm:text-sm md:px-12 md:py-4 md:text-base ${
+  const classes = `inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(123deg,#00161F_0%,#007A96_38%,#00B8D9_72%,#00E5FF_100%)] px-7 py-3 font-mono text-xs font-semibold uppercase tracking-widest text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(0,229,255,0.5)] sm:px-9 sm:py-3.5 sm:text-sm ${
     className ?? ""
   }`;
-  const style = {
-    boxShadow:
-      "0px 4px 4px rgba(0, 229, 255, 0.25), inset 4px 4px 12px rgba(0, 229, 255, 0.3)",
-    outline: "2px solid #ffffff",
-    outlineOffset: "-3px",
-  };
+  const style = { boxShadow: "0 4px 16px -6px rgba(0,229,255,0.35)" };
 
   if (href) {
     return (

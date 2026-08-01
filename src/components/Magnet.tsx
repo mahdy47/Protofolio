@@ -29,6 +29,13 @@ export default function Magnet({
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (
+      typeof window === "undefined" ||
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       const el = ref.current;
       if (!el) return;
