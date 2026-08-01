@@ -38,8 +38,7 @@ export default function ContactSection() {
 
         <FadeIn delay={0.15} y={30}>
           <p className="max-w-[480px] text-center font-light leading-relaxed text-[#D7E2EA] [font-size:clamp(1rem,1.8vw,1.25rem)]">
-            Interested in working together or have a question? Let&apos;s
-            connect.
+            Open to Junior Penetration Testing opportunities.
           </p>
         </FadeIn>
 

@@ -13,7 +13,7 @@ const NAV_LINKS = [
 const PROFILE_TITLE = "Penetration Tester";
 
 const PROFILE_DESCRIPTION =
-  "Foundational cybersecurity knowledge with hands-on experience in web application security, networking, and Linux, sharpened through practical labs and tools like Burp Suite and Nmap.";
+  "Junior Penetration Tester focused on Web Application Security and Network Security — sharpened through PortSwigger labs, CTF challenges, and tools like Burp Suite and Nmap.";
 
 export default function HeroSection() {
   return (
@@ -82,6 +82,9 @@ export default function HeroSection() {
           <FadeIn delay={0.5} y={20}>
             <div className="flex flex-col items-center gap-3 sm:flex-row">
               <LiveProjectButton href="#projects">View Projects</LiveProjectButton>
+              <LiveProjectButton href="/cv.pdf" newTab>
+                Download CV
+              </LiveProjectButton>
               <ContactButton href="#contact" />
             </div>
           </FadeIn>

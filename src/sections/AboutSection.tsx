@@ -4,7 +4,7 @@ import AnimatedText from "../components/AnimatedText";
 import SectionHeading from "../components/SectionHeading";
 
 const ABOUT_TEXT =
-  "I'm a cybersecurity student focused on offensive security. My learning journey has been hands-on: PortSwigger Web Security Academy labs and CTF challenges on platforms like Hack The Box, where I've practiced vulnerabilities such as SQL Injection, XSS, and IDOR. I'm building a strong foundation in web application security, networking, and Linux, using tools like Burp Suite, Nmap, and Wireshark to grow my skills in ethical hacking and security assessment.";
+  "Cybersecurity student focused on offensive security with hands-on practice across web application security, networking, and Linux. I work through PortSwigger Web Security Academy labs and CTF challenges on platforms like Hack The Box, practicing vulnerabilities including SQL Injection, XSS, and IDOR. I use tools like Burp Suite, Nmap, and Wireshark to grow practical skills in penetration testing and security assessment.";
 
 export default function AboutSection() {
   return (

@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Shield, Network, Code, Wrench, Check } from "lucide-react";
+import { Shield, Network, Code, Wrench, Terminal, Check } from "lucide-react";
 import FadeIn from "../components/FadeIn";
 import SectionHeading from "../components/SectionHeading";
 
@@ -30,9 +30,13 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     items: [
       "TCP/IP & Networking Fundamentals",
       "Network Protocols (HTTP/HTTPS, DNS, DHCP)",
-      "Linux Administration",
-      "Linux Command Line & System Navigation",
     ],
+  },
+  {
+    id: "05",
+    title: "Systems & Linux",
+    icon: Terminal,
+    items: ["Linux Administration & Command Line"],
   },
   {
     id: "03",
@@ -61,7 +65,7 @@ export default function SkillsSection() {
     >
       <SectionHeading className="mb-16 sm:mb-20 md:mb-28">Skills</SectionHeading>
 
-      <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SKILL_CATEGORIES.map((category, i) => {
           const Icon = category.icon;
           return (
