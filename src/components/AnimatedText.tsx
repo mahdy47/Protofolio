@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { motion, type Variants } from "framer-motion";
 
 interface AnimatedTextProps {
@@ -32,14 +33,17 @@ export default function AnimatedText({ text, className }: AnimatedTextProps) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={i}
-          variants={character}
-          className="inline-block whitespace-pre"
-        >
-          {char}
-        </motion.span>
+      {text.split(" ").map((word, wi, words) => (
+        <Fragment key={wi}>
+          <span className="inline-block whitespace-nowrap">
+            {word.split("").map((char, i) => (
+              <motion.span key={i} variants={character} className="inline-block">
+                {char}
+              </motion.span>
+            ))}
+          </span>
+          {wi < words.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </motion.p>
   );
